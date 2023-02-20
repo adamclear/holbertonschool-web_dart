@@ -30,8 +30,11 @@ class User extends Password {
 			user_password: userJson['user_password']
 		);
 	}
+	bool isPasswordValid() {
+		return Password(password: user_password).isValid();
+	}
 	@override
 	String toString () {
-		return 'User(id: $id, name: $name, age: $age, height: $height, Password: ${isValid(user_password)})';
+		return 'User(id: $id, name: $name, age: $age, height: $height, Password: ${isPasswordValid()})';
 	}
 }

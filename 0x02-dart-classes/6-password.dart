@@ -3,13 +3,13 @@ class Password {
 	Password({required String password}) : _password = password;
 	String get password => _password;
 	set password(String password) => _password = password;
-	bool isValid(user_password) {
+	bool isValid() {
 		return (
-			user_password.length >= 8 &&
-			user_password.length <= 16 &&
-			user_password.contains(new RegExp(r'[A-Z]')) &&
-			user_password.contains(new RegExp(r'[a-z]')) &&
-			user_password.contains(new RegExp(r'[0-9]'))
+			password.length >= 8 &&
+			password.length <= 16 &&
+			password.contains(new RegExp(r'[A-Z]')) &&
+			password.contains(new RegExp(r'[a-z]')) &&
+			password.contains(new RegExp(r'[0-9]'))
 		);
 	}
 	@override
