@@ -1,5 +1,3 @@
-import '2-main.dart';
-
 Future<void> getUser() async {
 	try {
 		print(await fetchUser());
@@ -7,3 +5,11 @@ Future<void> getUser() async {
 		print("error caught: $error");
 	}
 }
+
+Future<String> fetchUser() =>
+    // Imagine that this function is
+    // more complex and slow.
+    Future.delayed(
+      const Duration(seconds: 2),
+      () => throw 'Cannot locate user',
+    );
