@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:async';
 
 FutureOr<String> greetUser() async {
-	return fetchUserData().then((value) => '${json.decode(value)['username']}')
+	return fetchUserData().then((value) => '${json.decode(value)['username']}\n')
 	.catchError((error) => "error caught: $error");
 }
 
